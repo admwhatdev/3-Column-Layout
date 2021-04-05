@@ -1,0 +1,15 @@
+@media screen and (max-width: 750px) {
+  .card-container {
+    flex-direction: column;
+    height: auto;
+    max-width: 70%;
+    margin: 5rem auto;
+   .card:first-child{
+     border-radius: 10px 10px 0px 0px;
+   }
+   .card:last-child {
+     border-radius: 0px 0px 10px 10px;
+   }
+  
+  }
+}

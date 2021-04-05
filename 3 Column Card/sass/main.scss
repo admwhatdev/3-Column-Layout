@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+//font styles
+$head-font: 'Big Shoulders Display', sans-serif;
+$body-font: 'Lexend Deca', sans-serif;
+// color pallette
+$card1-primary: #E18524;
+$card2-primary: #006971;
+$card3-primary: #00403E;
+$gray: hsla(0, 0%, 100%, 0.75);
+$lightgray: hsl(0, 0%, 95%);
+*{
+  box-sizing: border-box;
+  font-family: $body-font;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+body {
+  background: $lightgray;
+  font-weight: 400;
+  font-size: 15px;
+  color: $lightgray;
+}
+.card-container {
+  display: flex;
+   min-height: 100vh;
+  max-width: 920px;
+  margin: 0 auto;
+  .card {
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    padding: 3.12rem;
+    background: $card1-primary;
+    height: 500px;
+    color: $gray; 
+  & h2 { 
+    font-family: $head-font;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $lightgray;
+  }
+  &:first-child {
+    border-radius: 10px 0px 0px 10px;
+  }
+  &:nth-child(2) {
+    background: $card2-primary;
+  }
+  &:nth-child(3) {
+    background: $card3-primary;
+    border-radius: 0px 10px 10px 0px;
+  }
+  button {
+    width: 150px;
+    font-size: 15px;
+    border-radius: 30px;
+    align-self: end;
+    height: 50px;
+    font-weight: bold;
+    background: $lightgray;
+    cursor: pointer;
+
+  }
+  .btn1 {
+    color: $card1-primary;
+      &:hover {
+      border: 3px solid $lightgray;
+      background: $card1-primary;
+      color: $lightgray;
+      transition: ease-in-out 0.3s;
+    }
+  }
+  .btn2 {
+    color: $card2-primary;
+    &:hover {
+      border: 3px solid $lightgray;
+      background: $card2-primary;
+      color: $lightgray;
+      transition: ease-in-out 0.3s;
+    }
+  }
+  .btn3 {
+    color: $card3-primary;
+    &:hover {
+      border: 3px solid $lightgray;
+      background: $card3-primary;
+      color: $lightgray;
+      transition: ease-in-out 0.3s;
+    }
+  }
+  }
+}
+.attribution { 
+  font-size: 11px; text-align: center; 
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  color: black;
+  background: #DFE6E9;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+@import 'mobile';
